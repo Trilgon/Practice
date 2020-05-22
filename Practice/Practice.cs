@@ -1,3 +1,4 @@
+//подкючение пространств имён
 using System;
 using System.Collections.Generic;
 
