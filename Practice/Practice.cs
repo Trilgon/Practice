@@ -134,7 +134,7 @@ class Army
 class Soldier : Unit
 {
     private string type_of_Armor;
-    public Soldier(int Health, int Damage, int Armor, string type_of_Armor, string Type)
+    public Soldier(int Health, int Damage, int Armor, string type_of_Armor, string Type)//конструктор для записи данных о юните
     {
         this.Type = Type;
         this.Health = Health;
