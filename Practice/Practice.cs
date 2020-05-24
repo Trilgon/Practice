@@ -82,30 +82,33 @@ class Army
         {
             while (Common_Strength > 0)
             {
-                count++;
-                damage -= Common_Armor;
+                count++;//увелечение номера атаки
+                damage -= Common_Armor;//учитывание брони армии
                 foreach (var unit in army)
                 {                    
-                    unit.GetDamage(damage);                 
+                    unit.GetDamage(damage);//каждому юниту наносится урон           
                 }
                 for (int i = 0; i < Common_Strength; i++)
                 {
-                    if (army[i].Health < 1)
+                    if (army[i].Health < 1)//проверка здоровья юнита
                     {
-                        army.Remove(army[i]);
-                        Common_Strength--;
-                        i--;
+                        army.Remove(army[i]);//удаление юнита без здоровья 
+                        Common_Strength--;//уменьшение численности армии
+                        i--;//уменьшение значения итератора в связи с уменьшением списка
                     }
                 }
-                Common_Health = 0;
+                //обнуление характеристик армии
+                Common_Health = 0
                 Common_Armor = 0;
                 Common_Damage = 0;
+                //пересчёт характеристик армии
                 foreach (var unit in army)
                 {
                     Common_Health += unit.Health;
                     Common_Armor += unit.Armor;
                     Common_Damage += unit.Damage;
                 }
+                //отображение состояния армии после атаки
                 Console.WriteLine($"После {count} атаки:\n" +
                     $"Информация об армии:\n" +
                     $"Кол-во жизней: {Common_Health}\n" +
@@ -116,7 +119,7 @@ class Army
         }
         public void AboutArmy()
         {
-            if (Common_Strength > 0)
+            if (Common_Strength > 0)//проверка численности
             {
                 Console.WriteLine($"Информация об армии:\n" +
                     $"Кол-во жизней: {Common_Health}\n" +
