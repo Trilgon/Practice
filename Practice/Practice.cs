@@ -190,13 +190,13 @@ class Machine : Unit
 
     public override void Attack(Unit enemy)
     {
-        if (Health > 0)
+        if (Health > 0)//проверка состояния
         {
-            if (quantity_of_ammo > 0)
+            if (quantity_of_ammo > 0)//проверка количества боеприпасов
             {
-                base.Attack(enemy);
+                base.Attack(enemy);//вызов базовой реализации метода
             }
-            quantity_of_ammo--;
+            quantity_of_ammo--;//уменьшение боеприпасов на один после атаки
         }
     }
 }
