@@ -239,8 +239,8 @@ class Rider : Unit
         this.rider = rider;
         this.mount = mount;
         this.Type = Type;
-        Health = rider.Health + mount.Health;
-        Damage = rider.Damage + mount.Damage;
+        Health = rider.Health + mount.Health;//подсчёт здоровья всадника
+        Damage = rider.Damage + mount.Damage;//подсчёт урон всадника
     }
 
     public override void About()
