@@ -28,7 +28,7 @@ namespace University_Practice
 
             army.AboutArmy();
 
-            army.GetDamage(500);
+            army.GetDamage(310);
             Console.WriteLine("Бой закончен");
 
             army.AboutArmy();
