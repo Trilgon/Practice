@@ -98,7 +98,7 @@ class Army
                     }
                 }
                 //обнуление характеристик армии
-                Common_Health = 0
+                Common_Health = 0;
                 Common_Armor = 0;
                 Common_Damage = 0;
                 //пересчёт характеристик армии
